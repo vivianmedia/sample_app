@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(:version => 20111025230002) do
     t.datetime "updated_at"
     t.string   "username"
     t.string   "email"
-    t.string   "password_hash"
-    t.string   "pssword_salt"
   end
 
 end
