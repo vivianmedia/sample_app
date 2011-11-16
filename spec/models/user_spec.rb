@@ -93,7 +93,18 @@ describe User do
           User.new(hash).should_not be_valid
         end
       end
+    describe "password encryption" do
+
+        before(:each) do
+          @user = User.create!(@attr)
+        end
+
+        it "should have an encrypted password attribute" do
+          @user.should respond_to(:encrypted_password)
+        end
+      end
 end
+
 
 
 
@@ -101,10 +112,11 @@ end
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  created_at :datetime
-#  updated_at :datetime
-#  username   :string(255)
-#  email      :string(255)
+#  id                 :integer         not null, primary key
+#  created_at         :datetime
+#  updated_at         :datetime
+#  username           :string(255)
+#  email              :string(255)
+#  encrypted_password :string(255)
 #
 

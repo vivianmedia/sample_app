@@ -14,14 +14,16 @@ class User < ActiveRecord::Base
                        :length       => { :within => 6..40 }
 end
 
+
 # == Schema Information
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  created_at :datetime
-#  updated_at :datetime
-#  username   :string(255)
-#  email      :string(255)
+#  id                 :integer         not null, primary key
+#  created_at         :datetime
+#  updated_at         :datetime
+#  username           :string(255)
+#  email              :string(255)
+#  encrypted_password :string(255)
 #
 
